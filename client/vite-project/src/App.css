@@ -1,0 +1,302 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #1a2e4d;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(240, 122, 122);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #3d4c5e;
+}
+.header h2{
+  color:#aaa;
+}
+.header p {
+  color: #aaa;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.messages {
+  flex: 1;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width:none ;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px; 
+  position: relative;
+  max-width: 70%;
+}
+
+.message.you {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end; 
+}
+
+.message.other {
+  background-color: #e1e1e1;
+  color: black;
+  align-self: flex-start; 
+}
+
+.message span {
+  font-weight: bold;
+  display: block;
+}
+
+.message-time {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #aaa;
+}
+
+.message-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-input button:hover {
+  background-color: #0056b3;
+} */
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a2e4d;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(240, 122, 122);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #3d4c5e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header h2 {
+  color: #fff;
+  font-size: 24px; /* Increased size for title */
+  margin: 0;
+}
+
+.header p {
+  color: #bbb;
+  font-size: 14px; /* Smaller font size for socket ID */
+  margin: 5px 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 10px;
+  color: #aaa;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.messages {
+  flex: 1;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px; /* Reduced text size */
+  position: relative;
+  max-width: 70%;
+}
+
+.message.you {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end; /* Align sender's messages to the right */
+}
+
+.message.other {
+  background-color: #e1e1e1;
+  color: black;
+  align-self: flex-start; /* Align receiver's messages to the left */
+}
+
+.message span {
+  font-weight: bold;
+  display: block;
+}
+
+.message-time {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  color: #aaa;
+}
+
+.message-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-input button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-input button:hover {
+  background-color: #0056b3;
+}
+
+/* New Styles for Professional Look */
+.socket-info {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.socket-info span {
+  font-weight: bold;
+}
